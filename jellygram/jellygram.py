@@ -67,6 +67,20 @@ def stop_on_error(func):
     return wrapper
 
 
+@client.on(events.NewMessage(pattern='reload'))
+@stop_on_error
+async def reload_handler(event):
+    if event.from_id != BOT_OWNER_ID:
+        print (f"Ignoring chat from {event.from_id}.")
+        return
+    global bot
+    bot = RiveScript()
+    bot.set_handler("sh", ShellObject())
+    bot.load_directory(os.path.join(base_dir, "data"))
+    bot.sort_replies()
+    await event.respond('Reloaded.')
+
+
 @client.on(events.NewMessage())
 @stop_on_error
 async def handler(event):
