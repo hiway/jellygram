@@ -29,39 +29,39 @@
     - Stopping jail <star>. <set jname=<star>><call>jail_stop</call>
 
     + list
-	- <call>jail_list</call>
+    - <call>jail_list</call>
 
     + list (running|up)
-	- <call>jail_list_running</call>
+    - <call>jail_list_running</call>
 
     + list (stopped|down)
-	- <call>jail_list_stopped</call>
+    - <call>jail_list_stopped</call>
 < topic
 
 > object jail_list sh
-	ioc list | awk '$4{ print $4; }' | tail +2
+    ioc list | awk '$4{ print $4; }' | tail +2
 < object
 
 > object jail_list_running sh
-	ioc list | grep yes | awk '$4{ print $4; }' | tail +2
+    ioc list | grep yes | awk '$4{ print $4; }' | tail +2
 < object
 
 > object jail_list_stopped sh
-	ioc list | grep no | awk '$4{ print $4; }' | tail +2
+    ioc list | grep no | awk '$4{ print $4; }' | tail +2
 < object
 
 > object jail_create sh
-	ioc create "$jname"
+    ioc create "$jname"
 < object
 
 > object jail_start sh
-	ioc start "$jname"
+    ioc start "$jname"
 < object
 
 > object jail_restart sh
-	ioc restart "$jname"
+    ioc restart "$jname"
 < object
 
 > object jail_stop sh
-	ioc stop "$jname"
+    ioc stop "$jname"
 < object
