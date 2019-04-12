@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+env \
+    TELEGRAM_APP_TOKEN="" \
+    TELEGRAM_BOT_TOKEN="" \
+    TELEGRAM_BOT_OWNER="" \
+    TELEGRAM_BOT_OWNER_ID="" \
+    TELEGRAM_BOT_NAME="" \
+    jellygram serve

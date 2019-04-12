@@ -1,0 +1,14 @@
++ hostname
+- <call>hostname</call>
+
+> object hostname sh
+	hostname
+< object
+
+
++ public ip [add|addr|address]
+- My public IP address is <call>public_ip_addr</call>
+
+> object public_ip_addr sh
+	curl -s https://icanhazip.com/
+< object
