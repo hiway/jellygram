@@ -1,34 +1,45 @@
++ uptime
+- <call>uptime</call>
+
+
 + hostname
-- <call>hostname</call>
+- <call>host_name</call>
+
++ host name
+- <call>host_name</call>
 
 
 + os [name|type]
-- <call>operating_system</call>
+- <call>os_name</call>
 
 + operating system [name|type]
-- <call>operating_system</call>
+- <call>os_name</call>
 
 
 + os version
-- <call>operating_system_version</call>
+- <call>os_version</call>
 
 + operating system version
-- <call>operating_system_version</call>
+- <call>os_version</call>
 
 
 + public ip [add|addr|address]
 - My public IP address is <call>public_ip_addr</call>
 
 
-> object hostname sh
+> object uptime sh
+	uptime
+< object
+
+> object host_name sh
 	hostname
 < object
 
-> object operating_system sh
+> object os_name sh
 	uname
 < object
 
-> object operating_system_version sh
+> object os_version sh
 	uname -v
 < object
 

@@ -87,6 +87,8 @@ async def handler(event):
     if event.from_id != BOT_OWNER_ID:
         print (f"Ignoring chat from {event.from_id}.")
         return
+    elif event.raw_text == 'reload':
+        return
     reply = bot.reply(BOT_OWNER, event.raw_text)
     await event.respond(reply)
 
