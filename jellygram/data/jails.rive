@@ -1,10 +1,11 @@
-// Aliases
-! sub ls = list
 
 + jails
 - Jail management. Type "help" for help.\n\n<set jname=undefined>{topic=jails}{@list}
 
 > topic jails
+    // Aliases
+    ! sub ls = list
+
     + help
     - Commands that might be helpful:\n\n
     ^ list, ls: lists all jails.
