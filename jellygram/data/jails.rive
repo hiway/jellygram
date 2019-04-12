@@ -1,7 +1,6 @@
 // Aliases
 ! sub ls = list
 
-// This gets us into the game.
 + jails
 - Jail management. Type "help" for help.\n\n<set jname=undefined>{topic=jails}{@list}
 
@@ -15,7 +14,7 @@
     - Exiting jail manager.<set jname=undefined>{topic=random}
 
     + *
-    - I'm not sure what you're trying to do.
+    - Unknown jails command.
 
     + create *
     - Creating jail <star>. <set jname=<star>><call>jail_create</call>
