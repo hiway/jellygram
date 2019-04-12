@@ -1,13 +1,36 @@
 + hostname
 - <call>hostname</call>
 
-> object hostname sh
-	hostname
-< object
+
++ os [name|type]
+- <call>operating_system</call>
+
++ operating system [name|type]
+- <call>operating_system</call>
+
+
++ os version
+- <call>operating_system_version</call>
+
++ operating system version
+- <call>operating_system_version</call>
 
 
 + public ip [add|addr|address]
 - My public IP address is <call>public_ip_addr</call>
+
+
+> object hostname sh
+	hostname
+< object
+
+> object operating_system sh
+	uname
+< object
+
+> object operating_system_version sh
+	uname -v
+< object
 
 > object public_ip_addr sh
 	curl -s https://icanhazip.com/
